@@ -2,4 +2,13 @@
     <string name="app_name">BikeServiceTracker</string>
     <string name="new_service">new service</string>
     <string name="show_pending">show pending services</string>
+
+
+    <string name="new_service_description">Enter the name of the new service and choose your settings</string>
+    <string name="new_service_name_hint">Name of the service</string>
+    <string name="new_service_distance_hint">Interval between services</string>
+    <string name="new_service_description_hint">Service description</string>
+    <string name="new_service_remind">Service reminder</string>
+    <string name="new_service_add">Add new service</string>
+    <string name="new_service_input_error">Check your input</string>
 </resources>

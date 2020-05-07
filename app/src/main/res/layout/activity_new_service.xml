@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewServiceActivity">
+
+    <EditText
+        android:id="@+id/new_service_name"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/new_service_name_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/new_service_add"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/new_service_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="addService"
+        android:text="@string/new_service_add"
+        app:layout_constraintBaseline_toBaselineOf="@+id/new_service_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/new_service_name" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/new_service_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/new_service_description" />
+
+    <EditText
+        android:id="@+id/new_service_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/new_service_distance_hint"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/new_service_name"
+        app:layout_constraintTop_toBottomOf="@+id/new_service_description" />
+
+    <CheckBox
+        android:id="@+id/new_service_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/new_service_remind"
+        app:layout_constraintStart_toStartOf="@+id/new_service_distance"
+        app:layout_constraintTop_toBottomOf="@+id/new_service_distance" />
+
+    <EditText
+        android:id="@+id/new_service_description"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/new_service_description_hint"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/new_service_name"
+        tools:layout_editor_absoluteX="6dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
