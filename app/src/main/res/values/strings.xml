@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BikeServiceTracker</string>
+    <string name="new_service">new service</string>
+    <string name="show_pending">show pending services</string>
 </resources>
