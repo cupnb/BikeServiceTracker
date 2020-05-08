@@ -23,7 +23,7 @@ public class IO {
     public static void addService(Service s, Context context) throws IOException {
 
         ArrayList<String> services = getFileContent(context);
-        services.add(";" + s.getName() + "," + s.getDescription() + "," + s.getDistance_interval() + "," + services.get(1) + "," + ((s.isReminder()) ? 1 : 0) + ";");
+        services.add(s.getName() + "," + s.getDescription() + "," + s.getDistance_interval() + "," + services.get(1) + "," + ((s.isReminder()) ? 1 : 0));
 
         String out = "";
 
