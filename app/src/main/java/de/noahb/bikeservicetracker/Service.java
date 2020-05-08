@@ -5,6 +5,16 @@ public class Service {
     private String description;
     private int distance_interval;
 
+    public boolean isReminder() {
+        return reminder;
+    }
+
+    public void setReminder(boolean reminder) {
+        this.reminder = reminder;
+    }
+
+    private boolean reminder;
+
     public Service(){
 
     }

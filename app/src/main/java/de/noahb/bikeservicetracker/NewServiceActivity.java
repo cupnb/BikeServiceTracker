@@ -2,14 +2,14 @@ package de.noahb.bikeservicetracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.ViewAnimator;
+
+import java.io.IOException;
 
 import static de.noahb.bikeservicetracker.R.id.new_service_reminder;
 
@@ -19,8 +19,6 @@ public class NewServiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_service);
-
-        Intent i = getIntent();
     }
 
     public void addService(View v){
@@ -36,7 +34,23 @@ public class NewServiceActivity extends AppCompatActivity {
 
         if (n.isEmpty() || des.isEmpty() || dis.isEmpty()){
             Toast.makeText(getApplicationContext(), getString(R.string.new_service_input_error), Toast.LENGTH_SHORT).show();
+            return;
         }
+        Service service = new Service();
+        service.setName(n);
+        service.setDescription(des);
+        service.setDistance_interval(Integer.parseInt(dis));
+        service.setReminder(re);
+
+        try{
+            IO.addService(service, getApplicationContext());
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+
+        startActivity(new Intent(this, MainActivity.class));
+
 
     }
 }
